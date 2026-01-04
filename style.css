@@ -596,46 +596,72 @@ footer ul li a {
     }
 }
 
+/* ================= GLOBAL DARK MODE ================= */
 body.dark {
-
-    background: #0b0b0f;
+    background: #020617;
     color: #e5e7eb;
 }
 
-/* Header */
+/* ================= HEADER ================= */
 body.dark header {
-    background: rgba(15, 15, 20, 0.85);
+    background: rgba(2, 6, 23, 0.85);
 }
 
-/* Sections */
+/* ================= SECTION BACKGROUNDS ================= */
 body.dark .about-alt,
 body.dark .skills-alt,
 body.dark .certificates {
-    background: #0f172a;
+    background: linear-gradient(
+        135deg,
+        #020617 0%,
+        #020617 40%,
+        #0f172a 100%
+    );
 }
 
-/* Cards */
+/* ================= CARDS ================= */
 body.dark .about-box,
 body.dark .skill-box,
 body.dark .cert-card {
-    background: #020617;
+    background: rgba(2, 6, 23, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
-/* Text */
+/* ================= TEXT ================= */
 body.dark p {
     color: #cbd5f5;
 }
 
-/* Skill tags */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4 {
+    color: #e5e7eb;
+}
+
+/* ================= SKILL TAGS ================= */
 body.dark .skill-tags span {
     background: #1e293b;
     color: #e5e7eb;
 }
 
-/* Projects */
+/* Hover stays colorful */
+body.dark .skill-tags span:hover {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+/* ================= PROJECTS ================= */
 body.dark .project-card {
     border-color: #e5e7eb;
 }
+
+body.dark .project-card:hover {
+    background: #020617;
+    color: #ffffff;
+}
+
 
 .contact-alt {
     background: #fafafa;
@@ -703,5 +729,69 @@ body.dark footer ul li a {
 
 .theme-toggle:hover {
     transform: rotate(15deg) scale(1.1);
+}
+
+/* ================= CONTACT – DARK MODE FIX ================= */
+body.dark .contact-alt {
+    background: linear-gradient(
+        135deg,
+        #020617 0%,
+        #020617 40%,
+        #0f172a 100%
+    );
+}
+
+/* Contact description text */
+body.dark .contact-desc {
+    color: #cbd5f5;
+}
+
+/* Contact cards */
+body.dark .contact-card {
+    background: rgba(2, 6, 23, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* Icon color */
+body.dark .contact-card i {
+    color: #38bdf8;
+}
+
+/* Labels */
+body.dark .contact-card span {
+    color: #94a3b8;
+}
+
+/* Main text */
+body.dark .contact-card p {
+    color: #e5e7eb;
+}
+
+/* Hover stays smooth in dark */
+body.dark .contact-card:hover {
+    box-shadow: 0 20px 45px rgba(56,189,248,0.25);
+}
+
+/* ================= DARK MODE ANIMATED BACKGROUND ================= */
+body.dark .about-alt,
+body.dark .skills-alt,
+body.dark .certificates,
+body.dark .contact-alt {
+    background-size: 300% 300%;
+    animation: darkGradientFlow 18s ease infinite;
+}
+
+/* Smooth gradient movement */
+@keyframes darkGradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
