@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -172,6 +174,82 @@ section {
 .socials i:hover {
     transform: scale(1.1);
 }
+/*abou me section*/
+
+.about-alt {
+    padding: 4rem 10%;
+    background: #fafafa;
+}
+
+.about-grid-alt {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* ABOUT CARD BASE */
+.about-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.about-box:hover {
+    transform: translateY(-6px);
+}
+
+/* LEFT BORDER COLORS (like skills) */
+.about-main::before,
+.experience::before,
+.education::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    border-radius: 16px 0 0 16px;
+}
+
+.about-main::before { background: #2563eb; }
+.experience::before { background: #16a34a; }
+.education::before { background: #9333ea; }
+
+/* TEXT STYLES */
+.about-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-box h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.about-box p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.about-box .date {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.about-box .title {
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.about-box .org {
+    font-size: 0.9rem;
+    color: #777;
+}
 
 /* ================= SKILLS ================= */
 .skills-alt {
@@ -287,7 +365,7 @@ section {
     gap: 0.8rem;
 }
 
-.cert-footer {
+.cert-footer {                          
     margin-top: auto;
     display: flex;
     justify-content: space-between;
@@ -517,3 +595,68 @@ footer ul li a {
         
     }
 }
+
+body.dark {
+
+    background: #0b0b0f;
+    color: #e5e7eb;
+}
+
+/* Header */
+body.dark header {
+    background: rgba(15, 15, 20, 0.85);
+}
+
+/* Sections */
+body.dark .about-alt,
+body.dark .skills-alt,
+body.dark .certificates {
+    background: #0f172a;
+}
+
+/* Cards */
+body.dark .about-box,
+body.dark .skill-box,
+body.dark .cert-card {
+    background: #020617;
+}
+
+/* Text */
+body.dark p {
+    color: #cbd5f5;
+}
+
+/* Skill tags */
+body.dark .skill-tags span {
+    background: #1e293b;
+    color: #e5e7eb;
+}
+
+/* Projects */
+body.dark .project-card {
+    border-color: #e5e7eb;
+}
+
+/* Contact */
+body.dark .input-box input {
+    background: #020617;
+    color: #e5e7eb;
+    border-color: #334155;
+}
+
+/* Footer */
+body.dark footer ul li a {
+    color: #e5e7eb;
+}
+
+.theme-toggle {
+    font-size: 1.6rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
